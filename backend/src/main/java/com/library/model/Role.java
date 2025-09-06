@@ -1,5 +1,5 @@
 package com.library.model;
 
-enum Role {
+public enum Role {
     ADMIN, MEMBER
 }
