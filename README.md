@@ -19,8 +19,7 @@ A full-stack web application for managing library books with user authentication
 - **Spring Boot 3.2**
 - **Spring Security** with JWT
 - **Spring Data JPA**
-- **MySQL Database**
-- **Swagger/OpenAPI** for documentation
+- **Postgres Database**
 
 ### Frontend
 - **React 18**
@@ -32,7 +31,7 @@ A full-stack web application for managing library books with user authentication
 
 - Java 17 or higher
 - Node.js 16+ and npm
-- MySQL 8.0+
+- Postgres
 - Maven 3.6+
 
 ## ⚡ Quick Start
@@ -45,9 +44,9 @@ A full-stack web application for managing library books with user authentication
    cd library-management-system
    ```
 
-2. **Create MySQL database**
+2. **Create Postgres database**
    ```sql
-   CREATE DATABASE library_db;
+   CREATE DATABASE librarymanagement;
    ```
 
 3. **Update database configuration**
@@ -61,9 +60,6 @@ A full-stack web application for managing library books with user authentication
    ```bash
    mvn spring-boot:run
    ```
-
-5. **Access API documentation**
-   Open: http://localhost:8080/swagger-ui.html
 
 ### Frontend Setup
 
@@ -249,16 +245,13 @@ Complete API documentation is available at:
 4. Add tests if applicable
 5. Submit a pull request
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🆘 Troubleshooting
 
 ### Common Issues
 
 **Database Connection Error**
-- Ensure MySQL is running
+- Ensure Postgres is running
 - Check database credentials in `application.properties`
 - Verify database `library_db` exists
 
