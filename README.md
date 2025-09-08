@@ -101,6 +101,19 @@ A full-stack web application for managing library books with user authentication
 | POST | `/api/books/{id}/borrow` | Borrow book | Yes |
 | POST | `/api/books/{id}/return` | Return book | Yes |
 
+## Frontend overview :-
+- Login
+<img src="assets/login.png" alt="Description of the GIF" width="1000">
+
+- Dashboard : -
+<img src="assets/dashboard.png" alt="Alt text" width="1000" />
+
+- Project details : -
+<img src="assets/projectdetails.png" alt="Alt text" width="1000" />
+
+- User management : -
+<img src="assets/usermanagement.png" alt="Alt text" width="1000" />
+
 ## 📝 Usage Examples
 
 ### Register a User
