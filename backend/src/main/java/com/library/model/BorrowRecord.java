@@ -12,11 +12,15 @@ public class BorrowRecord {
 
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
+    @com.fasterxml.jackson.annotation.JsonIgnore
     private User user;
+
 
     @ManyToOne
     @JoinColumn(name = "book_id", nullable = false)
+    @com.fasterxml.jackson.annotation.JsonIgnore
     private Book book;
+
 
     private LocalDateTime borrowedAt = LocalDateTime.now();
 

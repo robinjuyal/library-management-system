@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import javax.crypto.SecretKey;
+import java.nio.charset.StandardCharsets;
 import java.util.Date;
 
 @Component
@@ -18,7 +19,13 @@ public class JwtUtil {
     private int jwtExpiration;
 
     private SecretKey getSigningKey() {
-        return Keys.hmacShaKeyFor(jwtSecret.getBytes());
+        // Ensure the key is at least 256 bits (32 bytes) for HS256
+        byte[] keyBytes = jwtSecret.getBytes(StandardCharsets.UTF_8);
+        if (keyBytes.length < 32) {
+            // If the key is too short, pad it or use Keys.secretKeyFor()
+            return Keys.secretKeyFor(SignatureAlgorithm.HS256);
+        }
+        return Keys.hmacShaKeyFor(keyBytes);
     }
 
     /**
