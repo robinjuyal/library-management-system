@@ -109,10 +109,10 @@ A full-stack web application for managing library books with user authentication
 <img src="assets/dashboard.png" alt="Alt text" width="1000" />
 
 - Project details : -
-<img src="assets/projectdetails.png" alt="Alt text" width="1000" />
+<img src="assets/db1" alt="Alt text" width="1000" />
 
-- User management : -
-<img src="assets/usermanagement.png" alt="Alt text" width="1000" />
+- Available books : -
+<img src="assets/db2" alt="Alt text" width="1000" />
 
 ## 📝 Usage Examples
 
